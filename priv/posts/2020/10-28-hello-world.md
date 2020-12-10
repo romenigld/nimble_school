@@ -5,4 +5,10 @@
   description: "Our first blog post is here"
 }
 ---
-Yes, this is **the post** you've been waiting for.
+Body of the "Hello world" article.
+
+This is a *markdown* document with support for code highlighters:
+
+```elixir
+IO.puts "hello world".
+```
