@@ -8,14 +8,15 @@ defmodule NimbleSchool.Blog do
     highlighters: [:makeup_elixir, :makeup_erlang]
 
   # The @posts variable is first defined by NimblePublisher.
-  # Let's further modify it by sorting all posts by descending date.
   @posts Enum.sort_by(@posts, & &1.date, {:desc, Date})
 
-  # Let's also get all tags
+  def all_posts, do: @posts
+  def published_posts, do: Enum.filter(all_posts(), &(&1.published == true))
+  def recent_posts(num \\ 5), do: Enum.take(published_posts(), num)
+
+  # the @tags variable sorted and taked just unique tags
   @tags @posts |> Enum.flat_map(& &1.tags) |> Enum.uniq() |> Enum.sort()
 
-  # And finally export them
-  def all_posts, do: @posts
   def all_tags, do: @tags
 
   defmodule NotFoundError, do: defexception [:message, plug_status: 404]
