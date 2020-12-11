@@ -8,7 +8,7 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production: [https://nimble-school.herokuapp.com/blog)](https://nimble-school.herokuapp.com/blog)
+Ready to run in production: [https://nimble-school.herokuapp.com/blog](https://nimble-school.herokuapp.com/blog)
 
 ## Learn more
 
